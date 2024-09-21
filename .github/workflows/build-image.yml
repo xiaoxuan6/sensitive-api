@@ -1,0 +1,24 @@
+name: "build release"
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: build image
+        run: |
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          echo "输出版本号：$VERSION"
+          docker build -t ghcr.io/xiaoxuan6/sensitive-api:$VERSION .
+          docker push ghcr.io/xiaoxuan6/sensitive-api:$VERSION
+          docker logout
