@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/xiaoxuan6/sensitiveCheck/handlers"
+	"github.com/xiaoxuan6/sensitive-api/handlers"
 	"net/http"
 )
 

@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"github.com/xiaoxuan6/sensitiveCheck/common"
-	request2 "github.com/xiaoxuan6/sensitiveCheck/request"
-	"github.com/xiaoxuan6/sensitiveCheck/services"
+	"github.com/xiaoxuan6/sensitive-api/common"
+	request2 "github.com/xiaoxuan6/sensitive-api/request"
+	"github.com/xiaoxuan6/sensitive-api/services"
 	"net/http"
 )
 

@@ -1,4 +1,4 @@
-module github.com/xiaoxuan6/sensitiveCheck
+module github.com/xiaoxuan6/sensitive-api
 
 go 1.22.5
 
@@ -8,4 +8,4 @@ require (
 	github.com/importcjj/sensitive v0.0.0-20200106142752-42d1c505be7b
 )
 
-require golang.org/x/sys v0.25.0 // indirect
+require golang.org/x/sys v0.4.0 // indirect

@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/xiaoxuan6/sensitiveCheck/common"
+	"github.com/xiaoxuan6/sensitive-api/common"
 	"net/http"
 )
 

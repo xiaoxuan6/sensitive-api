@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/xiaoxuan6/sensitiveCheck/router"
-	"github.com/xiaoxuan6/sensitiveCheck/services"
+	"github.com/xiaoxuan6/sensitive-api/router"
+	"github.com/xiaoxuan6/sensitive-api/services"
 	"net/http"
 )
 
