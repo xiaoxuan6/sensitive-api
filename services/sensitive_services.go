@@ -31,6 +31,11 @@ func InitSensitive() {
 	Filter = sensitive.New()
 	for _, file := range files {
 		sensitiveFile := filepath.Join(dirPath, file.Name())
+		if _, err = os.Stat(sensitiveFile); os.IsNotExist(err) {
+			log.Println(fmt.Sprintf("file [%s] not exist", sensitiveFile))
+			continue
+		}
+
 		err = Filter.LoadWordDict(sensitiveFile)
 		if err != nil {
 			log.Fatalln("[InitSensitiveWord] load sensitive file err:", err, ", file:", sensitiveFile)
@@ -38,7 +43,7 @@ func InitSensitive() {
 	}
 }
 
-func WaterDict() {
+func WatcherDict() {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
 		log.Fatal(err.Error())

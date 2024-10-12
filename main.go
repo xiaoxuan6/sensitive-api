@@ -8,7 +8,7 @@ import (
 
 func main() {
 	services.InitSensitive()
-	go services.WaterDict()
+	go services.WatcherDict()
 
 	r := router.Register()
 	_ = http.ListenAndServe(":9210", r)
