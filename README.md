@@ -7,6 +7,24 @@
 docker run --name sensitive-api -p 9210:9210 -d ghcr.io/xiaoxuan6/sensitive-api:latest
 ```
 
+<details>
+<summary><b> Shell </b></summary>
+
+支持自定义文件，文件所在 `/root/sensitive/dict`, 自定义文件无需任何操作，程序会自动加载
+
+## install
+
+```shell
+bash -c "$(curl -L https://raw.githubusercontent.com/xiaoxuan6/sensitive-api/main/sensitive-api.sh)" @ install
+```
+
+## remove
+
+```shell
+bash -c "$(curl -L https://raw.githubusercontent.com/xiaoxuan6/sensitive-api/main/sensitive-api.sh)" @ remove
+```
+</details>
+
 ## Demo
 
 ### 查找 - findall
